@@ -1,0 +1,1 @@
+export { PickDisease } from "./PickDisease";

@@ -1,0 +1,22 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.swiper .swiper-slide {
+    width: auto;
+}
+
+.swiper-button-disabled {
+    svg {
+        path {
+            transition: stroke .3s linear;
+            stroke: var(--gray);
+        }
+    }
+}
+
+.pagination-wrapper {
+    position: absolute;
+}

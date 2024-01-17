@@ -1,0 +1,188 @@
+.menu {
+    background-color: var(--white);
+    height: 100vh;
+    width: 84px;
+    position: fixed;
+    z-index: 2;
+    border-right: 1px solid var(--blue-100);
+}
+
+.sick {
+    border-color: var(--red-100);
+
+    .header {
+        border-color: var(--red-100);
+    }
+}
+
+.header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--blue-100);
+    padding: 0 16px;
+
+    .logo {
+        cursor: pointer;
+    }
+}
+
+.healthy {
+    padding: 16px 0 16px 16px;
+}
+
+.condition {
+    font-size: 14px;
+}
+
+.menu li {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 19px 32px;
+
+    p {
+        color: var(--gray);
+    }
+}
+
+.menu li:not(.active):hover {
+    
+    p {
+        transition: ease .3s;
+        color: var(--dark);
+    }
+
+    svg {
+        path {
+            transition: ease .3s;
+            stroke: var(--dark);
+        }
+    }
+}
+
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 225px;
+    border-radius: 0px;
+    display: none;
+    padding: 0;
+
+    li {
+        margin-bottom: 5px;
+        padding: 16px;
+        cursor: pointer;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.submenu2 {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 225px;
+    border-top-left-radius: 0px;
+    display: none;
+    padding: 0;
+}
+
+.submenu li:hover {
+    transition: ease .3s;
+
+    p {
+        color: var(--dark) !important;
+    }
+}
+
+.submenu2 li:hover {
+    p {
+        color: var(--dark);
+    }
+}
+
+.menu li:hover > .submenu {
+    display: block;
+}
+
+.submenu li:hover > .submenu2 {
+    display: block;
+}
+
+.menu.open {
+    width: 256px;
+}
+
+.active {
+    background-color: var(--blue);
+    width: calc(100% - 32px);
+    border-radius: 12px;
+    transform: translate(16px, 0);
+   
+    p {
+        color: #fff !important;
+    }
+
+    svg {
+        path {
+            stroke: #fff;
+        }
+    }
+
+    .item {
+        transform: translate(-16px, 0);
+    }
+}
+
+.SickActive {
+    background-color: var(--red-400);
+    width: calc(100% - 32px);
+    border-radius: 12px;
+    transform: translate(16px, 0);
+   
+    p {
+        color: #fff !important;
+    }
+
+    svg {
+        path {
+            stroke: #fff;
+        }
+    }
+
+    .item {
+        transform: translate(-16px, 0);
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .menu.open {
+        width: 244px;
+
+        li {
+            p {
+                font-size: 14px;
+            }
+        }
+
+        svg {
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    .header {
+        height: 58px;
+    }
+
+    .condition {
+        font-size: 14px;
+    }
+    
+}

@@ -1,0 +1,52 @@
+.arrows {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    justify-content: flex-end;
+
+    .arrow {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid var(--blue);
+        cursor: pointer;
+        transition: 200ms ease-out;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .arrow:first-child {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    .arrow:hover {
+        svg {
+            path {
+                stroke: var(--white);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .arrows {
+        .arrow {
+            width: 32px;
+            height: 32px;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

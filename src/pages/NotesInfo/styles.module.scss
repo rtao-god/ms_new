@@ -1,0 +1,264 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 10px;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 15px;
+
+        .info {
+            background-color: var(--white);
+            height: 160px;
+            border-radius: var(--default-border);
+            padding: 40px;
+            display: flex;
+            grid-gap: 20px;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 15px;
+            }
+
+            .data {
+                display: flex;
+                align-items: center;
+                grid-gap: 160px;
+                width: 100%;
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    grid-gap: 15px;
+
+                    &Item {
+                        display: flex;
+                        align-items: center;
+                        grid-gap: 5px;
+                    }
+                }
+            }
+
+            .address {
+                display: flex;
+                grid-gap: 80px;
+                margin-top: 30px;
+
+                .box {
+                    display: flex;
+                    flex-direction: column;
+                    grid-gap: 10px;
+                }
+            }
+        }
+
+
+        .btn {
+            display: flex;
+            justify-content: start;
+            margin-top: 30px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slider {
+            height: 100%;
+            width: 1500px;
+
+            .window {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            grid-gap: 40px;
+
+            .left {
+                width: 960px;
+                height: 310px;
+                padding: 40px;
+                background-color: var(--white);
+                border-radius: var(--default-border);
+                display: flex;
+                justify-content: center;
+
+                .stats {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .box {
+                        display: flex;
+                        flex-direction: column;
+                        grid-gap: 20px;
+                        align-items: center;
+
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            grid-gap: 10px;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: 540px;
+                height: 310px;
+                background-color: var(--white);
+                border-radius: var(--default-border);
+                padding: 40px;
+            }
+        }
+
+        .gallery {
+            display: flex;
+            grid-gap: 15px;
+
+            .photo {
+                border-radius: var(--default-border);
+                width: 370px;
+                height: 240px;
+                cursor: pointer;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .add {
+                position: relative;
+                background-image: url("/assets/photo.jpg");
+                width: 370px;
+                height: 240px;
+
+                .btn {
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%);
+                    width: 52px;
+                    height: 52px;
+                }
+            }
+
+            .add::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(10px);
+                border-radius: var(--default-border);
+            }
+        }
+
+        .comments {
+
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 15px;
+            }
+
+            .items {
+                display: flex;
+                grid-gap: 20px;
+                align-items: center;
+            }
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        
+        .item {
+            background-color: var(--white);
+            padding: 30px;
+            height: 146px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .block {
+                display: flex;
+                flex-direction: column;
+                grid-gap: 10px;
+
+                .statusWrapper {
+                    display: flex;
+                    align-items: center;
+                    grid-gap: 10px;
+
+                    .status {
+                        display: flex;
+                        align-items: center;
+                        grid-gap: 10px;
+                    }
+                }
+                
+            }
+
+            .infoBlock {
+                display: flex;
+                flex-direction: column;
+                grid-gap: 20px;
+
+                .infoItem {
+                    display: flex;
+                    align-items: center;
+                    grid-gap: 20px;
+                }
+            }
+
+            .inner {
+                display: flex;
+                align-items: center;
+                grid-gap: 20px;
+            }
+        }
+    }
+
+    .modalImg {
+        border-radius: 20px;
+    }
+
+    .galleryItems {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(217, 217, 217, 0.3);
+        height: 180px;
+        padding: 20px;
+
+        img {
+            width: 160px;
+            height: 120px;
+        }
+    }
+}

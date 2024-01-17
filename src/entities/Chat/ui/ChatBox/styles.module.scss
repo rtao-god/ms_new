@@ -1,0 +1,26 @@
+.chat {
+    position: fixed;
+    top: 145px;
+    height: calc(100vh - 217px);
+    width: calc(100vw - 736px);
+    padding: 20px;
+    overflow-y: auto;
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: calc(100vh - 217px);
+        width: 100%;
+        grid-gap: 10px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .chat {
+        width: 100%;
+        top: 80px;
+        height: calc(100vh - 157px);
+    }
+}

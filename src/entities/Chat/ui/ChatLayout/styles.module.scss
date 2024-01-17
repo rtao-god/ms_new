@@ -1,0 +1,106 @@
+.chatInfo {
+    position: fixed;
+    top: 145px;
+    height: calc(100vh - 100px);
+    width: calc(100vw - 736px);
+    padding: 16px;
+    background-color: var(--white);
+    border-left: 1px solid var(--blue-100);
+}
+
+
+.messageBlock {
+    width: calc(100vw - 736px);
+    background-color: var(--white);
+    position: fixed;
+    bottom: 0;
+    padding: 12px 20px;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        grid-gap: 20px;
+
+        .inner {
+            display: flex;
+            width: 100%;
+
+            input {
+                border-color: var(--gray-200) !important;
+            }
+
+            input::placeholder {
+                font-size: 14px;
+            }
+
+            .btn {
+                border: 1px solid var(--gray-200);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-left: none;
+                border-top-right-radius: var(--mobile-default-border);
+                border-bottom-right-radius: var(--mobile-default-border);
+                cursor: pointer;
+                padding-right: 20px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+
+                }
+            }
+        }
+    }
+
+    .icon {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .view {
+
+        .data {
+            margin-left: 12px;
+            display: flex;
+            align-items: center;
+            grid-gap: 12px;
+
+            img {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        .chat {
+            width: 100%;
+
+            .list {
+                .text {
+                    max-width: 260px;
+                }
+            }
+        }
+
+        .messageBlock {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1500px) {
+    .view {
+        .info {
+            width: 100%;
+        }
+
+        .chat {
+            width: 100%;
+        }
+
+        .messageBlock {
+            width: 100%;
+        }
+    }
+}

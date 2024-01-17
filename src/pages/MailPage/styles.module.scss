@@ -1,0 +1,19 @@
+.filter {
+    margin: 0 auto;
+}
+
+.list {
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .list {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .filter {
+        width: 100%;
+    }
+}
